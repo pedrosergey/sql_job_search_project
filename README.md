@@ -22,7 +22,7 @@ The analysis is based on a comprehensive dataset that includes salaries, locatio
 
 ## The Analysis
 
-The analysis was conducted through a [series of SQL queries](/SQL%20Course%20Luke/project_sql/) designed to extract meaningful insights from the dataset. Below are the key queries used:
+The analysis was conducted through a [series of SQL queries](/project_sql/) designed to extract meaningful insights from the dataset. Below are the key queries used:
 
 Top Paying Job:
 
