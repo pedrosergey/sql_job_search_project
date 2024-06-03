@@ -34,7 +34,7 @@ GROUP BY
     skills_dim.skills
 ORDER BY 
     2 DESC
-LIMIT 10)
+LIMIT 50)
 
 UNION ALL
 
@@ -58,7 +58,7 @@ GROUP BY
     skills_dim.skills
 ORDER BY 
     2 DESC
-LIMIT 10)
+LIMIT 50)
 
 UNION ALL
 
@@ -82,5 +82,5 @@ GROUP BY
     skills_dim.skills
 ORDER BY 
     2 DESC
-LIMIT 10)
+LIMIT 50)
 
