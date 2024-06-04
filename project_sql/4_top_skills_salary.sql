@@ -17,8 +17,7 @@ WITH jobs AS(
 
 (SELECT 
     skills_dim.skills,
-    AVG(salary_year_avg) AS avg_salary,
-    'Data Scientist' AS role
+    AVG(salary_year_avg) AS avg_salary
 FROM    
     skills_job_dim
 INNER JOIN
@@ -30,8 +29,6 @@ INNER JOIN
     ON
     skills_dim.skill_id = skills_job_dim.skill_id
 WHERE 
-    job_title_short = 'Data Scientist'
-    AND
     salary_year_avg IS NOT NULL
 GROUP BY
     skills_dim.skills

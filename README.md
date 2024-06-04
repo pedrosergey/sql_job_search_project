@@ -57,25 +57,85 @@ As a result, we got the following bar graph, where the skills are divided by rol
 
 **3. Most demanded skills:**
 
-[](/project_sql/3_most_demand_skills.sql)
+Using the
+[third query](/project_sql/3_most_demand_skills.sql), we were able to find out which are the most demanded skills among these three roles.
+
+Something to point out is that the Data Scientist role is the one that shares more skills with the other two, so we can say it is in the middle of both positions.
+
+Only the top 15 skills are shown in the graph, and as can be seen, there are just 4 (SQL, Python, and two cloud providers) that are shared by all of the roles.
+
+![The graph bar of the third query](/visualizations/3_query.png "Third query")
 
 **4. Best-paying skills:**
 
-[](/project_sql/4_top_skills_salary.sql)
+We were able to retrieve the most payed skill per role by using [this query](/project_sql/4_top_skills_salary.sql) As it can be see in the next table, there are some specific skills what lead the ranking for each of the roles.
+
+|                    | Data Scientist | Data Analyst | Data Engineer |
+|--------------------|----------------|--------------|---------------|
+**1**	| gdpr |	bitbucket |	mongo
+**2**	| golang |	pyspark |	ggplot2
+**3**	| atlassian |	terraform |	seaborn
+**4**	| opencv |	unify |	ubunty
+**5**	| microstrategy |	couchbase |	rust
 
 **5. Most optimal skills:**
 
+And finally, using all the analysis that we have been making throughout this project, we arrive at the final queries, where we determine what the 15 most optimal skills to learn for each of the roles are, based on the most demanded and best paid.
+
+The following contains the 15 most demanded skills, sorted by average salary, for each of the roles.
+
+| Data Scientist | Data Analyst | Data Engineer |
+|----------------|--------------|---------------|
+| **pytorch**           |	go          |	kafka
+| **tensorflow**        |	azure       |	scala
+| *scikit-learn*    |	aws	        | **spark**
+| aws               |	oracle      |	airflow
+| **spark**         |	looker      |	java
+| *pandas*          |	*python*    |	redshift
+| tableau           |	sap         |	snowflake
+| *python*          |	r           |	hadoop
+| *sql*             |	tableau     |	aws
+| azure             |	sas         |	databricks
+| r                 |	*sql*       |  	*python*
+| *git*             |	**power bi**| 	**gcp**
+| sas               |	powerpoint  |	*sql*
+| *excel*           |	*excel*     |	*git*
+| **power bi**      |	word	    |   azure
+
+As can be seen, there are different types of skills, like programming (Python, SQL, Scala), libraries (Scikit-learn, Pandas), or cloud providers (AWS, Azure, GCP).
+
+I have already use *some of them* and I am planning to deeply learn **some others**.
 
 
-Throughout this project, I enhanced my SQL skills, ranging from basic queries to more advanced techniques such as Common Table Expressions (CTEs). 
+## Key learnings included 🧠
 
-## Key learnings include 🧠
+Between other things, through the development of this awesome project, we were able to learn key components in the day in the life of a data nerd:
 
-Data Extraction: How to extract relevant data from a large dataset using SQL.
-Aggregation: Using SQL functions to compute averages, counts, and other aggregations.
-CTEs: Leveraging Common Table Expressions to simplify complex queries and improve readability.
-Data Visualization: Utilizing tools like Google Sheets to create insightful visualizations from the SQL query results.
+**Data Storage and Extraction**: How to create and manage a database and extract relevant data from it using SQL.
+
+**Aggregation**: Using SQL functions to compute averages, counts, and other aggregations.
+
+**CTEs**: Leveraging Common Table Expressions to simplify complex queries and improve readability and performance.
+
+**Data Visualization and Storytelling**: Utilizing tools like Google Sheets to create insightful visualizations from the SQL query results. Using those visuals along with other components (like tables) to start with a generic topic and finish with some really valuable insights.
 
 ## Conclusions 🏆
 
-This project provided valuable insights into the data job market. By analyzing salary data and skill demands, we identified the most lucrative and in-demand skills for data professionals. The findings can guide individuals in their career development and skill acquisition strategies. Additionally, the project served as a practical application of SQL, reinforcing both basic and advanced querying techniques.
+First and foremost, I would like to share my gratitude with the course creators [Luke Barousse](https://www.linkedin.com/in/luke-b/) and [Kelly Adams](https://www.linkedin.com/in/kellyjianadams/), for their awesome work and all the dedication. Thanks a lot, guys! 💪🏽
+
+Then, unifying the most optimal skills to learn with my personal likes and the current position of my career, I have decided on my roadmap of knowledge for the short-term.
+
+As for now, I am about to finish this wonderful **SQL** project and I am currently enrolled in a 90-day **Python** bootcamp, in order to keep growing my programming skills.
+
+In my current position as a Technical Support Representative for **Google Cloud Platform**, I am learning firsthand a wide range of topics related to **cloud computing**.
+
+As my first step in the data world was **PowerBI** and because it is a tool that I love, my next objective is to deeply learn this wonderful tool, by combining the theoretical aspects of some courses with some personal projects that I have with a very good friend.
+
+After that, and because of its importance in the world of data, I will be focusing on **Spark**, **PyTorch**, **TensorFlow** and finally, though it does not appear on the list, **MongoDB** as a non-relational database.
+
+I have already been in contact with these tools, but I really want to learn them and try to master them as much as I can.
+
+It will be a lovely path that I will be more than pleased to cover.
+
+Rest at the end, not in the middle ⚫🐍
+
