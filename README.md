@@ -68,7 +68,7 @@ Only the top 15 skills are shown in the graph, and as can be seen, there are jus
 
 **4. Best-paying skills:**
 
-We were able to retrieve the most payed skill per role by using [this query](/project_sql/4_top_skills_salary.sql) As it can be see in the next table, there are some specific skills what lead the ranking for each of the roles.
+We were able to retrieve the most payed skill per role by using [this query](/project_sql/4_top_skills_salary.sql). As it can be see in the next table, there are some specific skills what lead the ranking for each of the roles.
 
 |                    | Data Scientist | Data Analyst | Data Engineer |
 |--------------------|----------------|--------------|---------------|
@@ -135,7 +135,7 @@ After that, and because of its importance in the world of data, I will be focusi
 
 I have already been in contact with these tools, but I really want to learn them and try to master them as much as I can.
 
-It will be a lovely path that I will be more than pleased to cover.
+It will be a lovely path that I will be more than pleased to cover 🚀
 
 Rest at the end, not in the middle ⚫🐍
 
