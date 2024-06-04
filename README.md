@@ -52,7 +52,7 @@ Thanks to the [second query](/project_sql/2_skills_top_paying_jobs.sql), we were
 
 As a result, we got the following bar graph, where the skills are divided by role. Note that only the skills that appeared more than 10 times are shown in the graph.
 
-[second query](//visualizations/2_query.png)
+![The graph bar of the second query](/visualizations/2_query.png "Second query")
 
 
 **3. Most demanded skills:**
