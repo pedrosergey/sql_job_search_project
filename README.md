@@ -8,91 +8,74 @@ I have followed the awesome [SQL for Data Analytics course](https://youtu.be/7mz
 
 I have adapted the course to my personal preferences, focusing on jobs for Data Scientists, Data Analysts, and Data Engineers, where the positions are in Germany, Switzerland, Ireland, Canada, Spain, or offer the option of working from home.
 
-## Background
+## Background 👾
 
 In today's data-driven world, understanding the job market for data-related positions is crucial for professionals looking to advance their careers. This project analyzes job data to uncover valuable insights regarding top-paying jobs, most demanded skills, and optimal skills for career development.
 
 The analysis is based on a comprehensive dataset that includes salaries, locations, job types, required skills, and other characteristics.
 
-## Tools I Used
+## Tools I Used 🛠️
 
-**SQL:** For querying and analyzing the data.
+**SQL:** The main tool that allowed us to perform the analysis.
+
+**PostgreSQL:** The chosen database management system.
+
+**VSCode:** As the code editor to access the database and run the SQL queries.
 
 **Google Sheets:** For creating visualizations to better understand and present the findings.
 
-## The Analysis
+**Git & GitHub:** For version control and sharing the project with other people.
 
-The analysis was conducted through a [series of SQL queries](/project_sql/) designed to extract meaningful insights from the dataset. Below are the key queries used:
 
-Top Paying Job:
 
-sql
-Copy code
-SELECT job_title, AVG(salary) AS average_salary
-FROM job_data
-GROUP BY job_title
-ORDER BY average_salary DESC
-LIMIT 1;
-Skills of the Top Paying Jobs:
+## The Analysis 📊
 
-sql
-Copy code
-SELECT skill, COUNT(*) AS demand
-FROM job_data
-WHERE job_title = (SELECT job_title
-                   FROM job_data
-                   GROUP BY job_title
-                   ORDER BY AVG(salary) DESC
-                   LIMIT 1)
-GROUP BY skill
-ORDER BY demand DESC;
-Most Demanded Skills:
+The analysis was conducted through a [series of SQL queries](/project_sql/) designed to extract meaningful insights from the dataset. 
 
-sql
-Copy code
-SELECT skill, COUNT(*) AS demand
-FROM job_data
-GROUP BY skill
-ORDER BY demand DESC
-LIMIT 10;
-Top Salary Skills:
+Below are the key queries used:
 
-sql
-Copy code
-SELECT skill, AVG(salary) AS average_salary
-FROM job_data
-GROUP BY skill
-ORDER BY average_salary DESC
-LIMIT 10;
-Most Optimal Skills:
+**1. Top paying jobs:**
 
-sql
-Copy code
-WITH skill_demand AS (
-    SELECT skill, COUNT(*) AS demand
-    FROM job_data
-    GROUP BY skill
-),
-skill_salary AS (
-    SELECT skill, AVG(salary) AS average_salary
-    FROM job_data
-    GROUP BY skill
-)
-SELECT sd.skill, sd.demand, ss.average_salary
-FROM skill_demand sd
-JOIN skill_salary ss ON sd.skill = ss.skill
-ORDER BY sd.demand DESC, ss.average_salary DESC;
-What I Learned
+With the [first query](/project_sql/1_top_paying_jobs.sql), we noticed some initial insights about the jobs. The results shown below are from the top 100 best-paying jobs for each of the roles.
+
+Despite some outliers, Data Scientists have a higher average salary per year, followed by Data Engineers. Data Analyst jobs are the least paid among these three.
+
+|                    | Data Scientist | Data Analyst | Data Engineer |
+|--------------------|----------------|--------------|---------------|
+| **Avg**            | 239,442        | 151,707      | 204,691       |
+| **Max**            | 550,000        | 650,000      | 375,000       |
+| **Min**            | 205,000        | 122,500      | 175,000       |
+
+**2. Skills of the top paying jobs:**
+
+Thanks to the [second query](/project_sql/2_skills_top_paying_jobs.sql), we were able to determine which skills were required for the top 100 best-paying jobs from the first query.
+
+As a result, we got the following bar graph, where the skills are divided by role. Note that only the skills that appeared more than 10 times are shown in the graph.
+
+[second query](//visualizations/2_query.png)
+
+
+**3. Most demanded skills:**
+
+[](/project_sql/3_most_demand_skills.sql)
+
+**4. Best-paying skills:**
+
+[](/project_sql/4_top_skills_salary.sql)
+
+**5. Most optimal skills:**
+
+
 
 Throughout this project, I enhanced my SQL skills, ranging from basic queries to more advanced techniques such as Common Table Expressions (CTEs). 
 
-## Key learnings include:
+## Key learnings include 🧠
 
 Data Extraction: How to extract relevant data from a large dataset using SQL.
 Aggregation: Using SQL functions to compute averages, counts, and other aggregations.
 CTEs: Leveraging Common Table Expressions to simplify complex queries and improve readability.
 Data Visualization: Utilizing tools like Google Sheets to create insightful visualizations from the SQL query results.
 
-## Conclusions
+## Conclusions 🏆
 
 This project provided valuable insights into the data job market. By analyzing salary data and skill demands, we identified the most lucrative and in-demand skills for data professionals. The findings can guide individuals in their career development and skill acquisition strategies. Additionally, the project served as a practical application of SQL, reinforcing both basic and advanced querying techniques.

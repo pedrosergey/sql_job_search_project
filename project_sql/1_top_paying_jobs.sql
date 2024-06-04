@@ -3,6 +3,7 @@
 (SELECT 
     jobs.job_id,
     company.name AS company_name,
+    jobs.job_title_short,
     jobs.job_work_from_home,
     jobs.job_country,
     jobs.job_title,
@@ -31,6 +32,7 @@ UNION ALL
 (SELECT 
     jobs.job_id,
     company.name AS company_name,
+    jobs.job_title_short,
     jobs.job_work_from_home,
     jobs.job_country,
     jobs.job_title,
@@ -59,6 +61,7 @@ UNION ALL
 (SELECT 
     jobs.job_id,
     company.name AS company_name,
+    jobs.job_title_short,
     jobs.job_work_from_home,
     jobs.job_country,
     jobs.job_title,
